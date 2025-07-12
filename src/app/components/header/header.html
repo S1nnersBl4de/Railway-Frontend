@@ -1,0 +1,22 @@
+<header class="header-container">
+  <div class="header-left">
+    <span class="logo" routerLink="/">RailwaySystem</span>
+
+    <!-- Admin link appears only for admin email -->
+    <a *ngIf="isAdmin" class="admin-link" routerLink="/admin">Admin Page</a>
+  </div>
+
+  <div class="header-right">
+    <a routerLink="/my-booking-history" class="my-bookings-link">My Bookings</a>
+    <button *ngIf="!user" class="login-btn" (click)="navigateToLogin()">Login</button>
+
+    <div *ngIf="user" class="user-menu" (mouseenter)="toggleDropdown(true)" (mouseleave)="toggleDropdown(false)">
+      <div class="user-avatar">👤</div>
+      <div class="dropdown" [class.show]="showDropdown">
+        <p class="user-email">{{ user.email }}</p>
+        <hr />
+        <button (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</header>

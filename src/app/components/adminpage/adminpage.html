@@ -1,0 +1,23 @@
+<!-- admin can add trains -->
+
+<app-header></app-header>
+
+<app-sidebar></app-sidebar>
+
+<div class="admin-container">
+  <h2>Add Train</h2>
+
+  <form (ngSubmit)="submitTrain()" #trainForm="ngForm">
+    <input type="text" placeholder="Train Name" [(ngModel)]="train.name" name="name" required />
+    <input type="text" placeholder="Source" [(ngModel)]="train.source" name="source" required />
+    <input type="text" placeholder="Destination" [(ngModel)]="train.destination" name="destination" required />
+    <input type="datetime-local" [(ngModel)]="train.departureTime" name="departureTime" required />
+    <input type="datetime-local" [(ngModel)]="train.arrivalTime" name="arrivalTime" required />
+    <input type="number" placeholder="Total Seats" [(ngModel)]="train.totalSeats" name="totalSeats" required />
+
+    <button type="submit" [disabled]="trainForm.invalid">Add Train</button>
+  </form>
+
+  <p class="success-message" *ngIf="successMessage">{{ successMessage }}</p>
+</div>
+

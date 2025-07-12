@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="login-page-wrapper">
+  <div class="login-background">
+    <div class="login-container">
+      <h2>Login</h2>
+
+      <!-- Success Message -->
+      <div *ngIf="successMessage" class="success-message">
+        {{ successMessage }}
+      </div>
+
+      <!-- Error Message -->
+      <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+      </div>
+
+      <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <input
+          type="email"
+          placeholder="Email"
+          [(ngModel)]="model.email"
+          name="email"
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="Password"
+          [(ngModel)]="model.password"
+          name="password"
+          required
+        />
+
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+      </form>
+
+      <p class="register-link">
+        Not registered yet?
+        <a routerLink="/register">Click here</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+

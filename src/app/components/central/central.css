@@ -1,0 +1,91 @@
+.central-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+
+.background-box {
+  background-image: url("https://static.tkt.ge/next/static/images/railway-bg-desktop.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 25px;
+  width: 95%;
+  padding: 60px 40px;
+  margin: 50px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  display: flex;
+  gap: 15px;
+  background-color: #ffffffef;
+  padding: 20px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-box input {
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+  min-width: 140px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.search-box input:focus {
+  border-color: #888;
+}
+
+.search-button {
+  padding: 12px 25px;
+  background: linear-gradient(to right, #ff0055, #ff7b7b);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-button:hover {
+  background: linear-gradient(to right, #e6004c, #ff6666);
+}
+
+.search-results {
+  margin-top: 30px;
+  background-color: #ffffffd8;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.train-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+}
+
+.book-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2e8b57;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-button:hover {
+  background-color: #23724a;
+}

@@ -1,0 +1,27 @@
+.bookings-wrapper {
+  margin-left: 220px;
+  padding: 40px;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+.bookings-wrapper h2 {
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.booking-card {
+  background-color: white;
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.booking-card div {
+  width: 24%;
+  font-weight: 500;
+}

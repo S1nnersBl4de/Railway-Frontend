@@ -1,0 +1,37 @@
+<div class="central-wrapper">
+  <div class="background-box">
+    <div class="search-box">
+      <input
+        type="text"
+        placeholder="From"
+        [(ngModel)]="source"
+        name="source"
+        required
+      />
+      <input
+        type="text"
+        placeholder="To"
+        [(ngModel)]="destination"
+        name="destination"
+        required
+      />
+      <button class="search-button" (click)="onSearch()">SEARCH</button>
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+    <div class="search-results" *ngIf="filteredTrains.length > 0">
+      <h3>Search Results</h3>
+        <!-- after search a valid train -->
+      <div *ngFor="let train of filteredTrains" class="train-card">
+        <div><strong>Name:</strong> {{ train.name }}</div>
+        <div><strong>From:</strong> {{ train.source }}</div>
+        <div><strong>To:</strong> {{ train.destination }}</div>
+        <div><strong>Departure:</strong> {{ train.departureTime | date: 'short' }}</div>
+        <div><strong>Arrival:</strong> {{ train.arrivalTime | date: 'short' }}</div>
+        <div><strong>Total Seats:</strong> {{ train.totalSeats }}</div>
+        <button class="book-button" (click)="bookSeat(train)">Book Ticket</button>
+      </div>
+    </div>
+  </div>
+</div>

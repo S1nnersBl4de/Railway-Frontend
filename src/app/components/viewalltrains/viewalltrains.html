@@ -1,0 +1,26 @@
+<!-- admin pannel where u can see all valid trains -->
+
+<app-header></app-header>
+
+<app-sidebar></app-sidebar>
+
+<div class="train-page">
+  <h2>All Trains</h2>
+
+  <div class="train-list">
+    <div *ngFor="let train of trains" class="train-card">
+      <div class="train-header">
+        <h3>{{ train.name }}</h3>
+        <p><strong>Total Seats:</strong> {{ train.totalSeats }}</p>
+        <p><strong>Available Seats:</strong> {{ train.availableSeats }}</p>
+      </div>
+      <div class="train-body">
+        <p><strong>From:</strong> {{ train.source }}</p>
+        <p><strong>To:</strong> {{ train.destination }}</p>
+        <p><strong>Departure:</strong> {{ train.departureTime | date:'short' }}</p>
+        <p><strong>Arrival:</strong> {{ train.arrivalTime | date:'short' }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,43 @@
+.train-page {
+  margin-left: 250px; 
+  padding: 30px;
+}
+
+.train-page h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #333;
+}
+
+.train-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.train-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.train-card:hover {
+  transform: translateY(-2px);
+}
+
+.train-header h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+.train-body p,
+.train-header p {
+  margin: 4px 0;
+  color: #555;
+}

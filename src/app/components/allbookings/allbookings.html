@@ -1,0 +1,16 @@
+<!-- admin can see all users bookings -->
+
+<app-header></app-header>
+
+<app-sidebar></app-sidebar>
+
+<div class="bookings-wrapper">
+  <h2>All Bookings</h2>
+
+  <div *ngFor="let booking of bookings" class="booking-card">
+    <div><strong>User:</strong> {{ booking.username }}</div>
+    <div><strong>Train:</strong> {{ booking.trainName }}</div>
+    <div><strong>Departure:</strong> {{ booking.departureTime }}</div>
+    <div><strong>Seat #:</strong> {{ booking.seatNumber }}</div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="my-bookings-wrapper">
+  <h2>My Bookings</h2>
+
+  <!-- No bookings message -->
+  <div *ngIf="myBookings.length === 0" class="no-bookings">
+    <p>You haven't booked any tickets yet.</p>
+  </div>
+
+  <!-- Download report button -->
+  <div *ngIf="myBookings.length > 0" class="report-bar">
+    <button class="download-btn" (click)="downloadReport()">Download Report</button>
+  </div>
+
+  <!-- Bookings list -->
+  <div class="bookings-list" *ngIf="myBookings.length > 0">
+    <div *ngFor="let booking of myBookings" class="booking-card">
+      <div class="train-info">
+        <h3>{{ booking.trainName }}</h3>
+        <p><strong>Departure:</strong> {{ booking.departureTime | date: 'short' }}</p>
+        <p><strong>Seat #:</strong> {{ booking.seatNumber }}</p>
+      </div>
+    </div>
+  </div>
+</div>
